@@ -22,7 +22,7 @@
 		"lint:fix": "biome check --write .",
 		"format": "biome format --write .",
 		"preview": "vite preview",
-		"rebuild:native": "node ./node_modules/electron-rebuild/lib/src/cli.js --force --only uiohook-napi",
+		"rebuild:native": "electron-rebuild --force --only uiohook-napi",
 		"build:native-helpers": "node scripts/build-native-helpers.mjs",
 		"build:whisper-runtime": "node scripts/build-whisper-runtime.mjs",
 		"build:platform-native-helpers": "npm run build:native-helpers && npm run build:windows-capture && npm run build:cursor-monitor && npm run build:whisper-runtime",
@@ -73,7 +73,6 @@
 		"electron": "42.11.18",
 		"electron-builder": "^26.7.0",
 		"electron-icon-builder": "^2.0.1",
-		"electron-rebuild": "^3.2.9",
 		"emoji-picker-react": "^4.16.1",
 		"fast-check": "^4.5.2",
 		"fix-webm-duration": "^1.0.6",
@@ -102,7 +101,8 @@
 		"vite-plugin-electron": "^0.28.6",
 		"vite-plugin-electron-renderer": "^0.14.5",
 		"vitest": "^4.0.16",
-		"web-demuxer": "^4.0.0"
+		"web-demuxer": "^4.0.0",
+		"@electron/rebuild": "4.2.0"
 	},
 	"main": "dist-electron/main.js",
 	"engines": {
